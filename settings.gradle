@@ -1,0 +1,8 @@
+rootProject.name = 'framework'
+include ':base-mail'
+include ':base-mybatis'
+include ':base-util'
+
+project(':base-mail').projectDir = "$rootDir/base-mail" as File
+project(':base-mybatis').projectDir = "$rootDir/base-mybatis" as File
+project(':base-util').projectDir = "$rootDir/base-util" as File

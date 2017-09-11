@@ -1,0 +1,29 @@
+allprojects  {
+  apply plugin: 'maven'
+
+  group = 'com.dev'
+version = '0.0.1-SNAPSHOT'
+}
+
+subprojects {
+  apply plugin: 'java'
+  sourceCompatibility = 1.7
+  targetCompatibility = 1.7
+
+  task packageSources(type: Jar) {
+classifier = 'sources'
+from sourceSets.main.allSource
+
+}
+artifacts.archives packageSources
+  repositories {
+    mavenLocal()
+    
+    maven { url "http://localhost:4080/nexus/content/groups/public/" }
+    maven { url "http://repo.maven.apache.org/maven2" }
+  }
+
+  
+  
+  
+}
