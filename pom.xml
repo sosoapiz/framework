@@ -16,19 +16,19 @@
 	<properties>
 		<jdk.version>1.7</jdk.version>
 		<encoding.charset>UTF-8</encoding.charset>
-		<spring.version>4.0.1.RELEASE</spring.version>
+		<spring.version>4.3.9.RELEASE</spring.version>
 	</properties>
 
 	<!-- 发布组件到私服上 -->
 	<distributionManagement>
 		<snapshotRepository>
-			<id>SosoApiSnapshots</id>
-			<url>http://localhost:4080/nexus/content/repositories/SosoApiSnapshots</url>
+		    <id>snapshots</id>
+		    <url>http://maven.parim.net/nexus/content/repositories/snapshots</url>
 		</snapshotRepository>
 
 		<repository>
-			<id>SosoApiReleases</id>
-			<url>http://localhost:4080/nexus/content/repositories/SosoApiReleases</url>
+		    <id>releases</id>
+		    <url>http://maven.parim.net/nexus/content/repositories/releases</url>
 		</repository>
 	</distributionManagement>
 
@@ -37,7 +37,7 @@
 		<repository>
 			<id>PublicRepositories</id>
 			<name>PublicRepositories</name>
-			<url>http://localhost:4080/nexus/content/groups/public/</url>
+			<url>http://maven.parim.net/nexus/content/groups/public/</url>
 			<releases>
 				<enabled>true</enabled>
 			</releases>
@@ -54,7 +54,7 @@
 		<pluginRepository>
 			<id>PublicRepositories</id>
 			<name>PublicRepositories</name>
-			<url>http://localhost:4080/nexus/content/groups/public/</url>
+			<url>http://maven.parim.net/nexus/content/groups/public/</url>
 			<releases>
 				<enabled>true</enabled>
 			</releases>
@@ -339,7 +339,7 @@
 			<dependency>
 				<groupId>com.fasterxml.jackson.module</groupId>
 				<artifactId>jackson-module-jaxb-annotations</artifactId>
-				<version>2.3.2</version>
+				<version>2.5.0</version>
 			</dependency>
 
 			<!-- httpclient相关 -->
